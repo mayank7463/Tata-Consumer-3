@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    margin: 20px;
+}
+
+.world-map {
+    width: 100%;
+    max-width: 1000px; /* Limit the max size of the map */
+    position: relative;
+    overflow: hidden;
+}
+
+.world-map .map-img {
+    width: 100%;
+    height: auto;
+}
+
+
+.pin-usa,
+.pin-canada, .pin-uk, .pin-europe, .pin-middle-East, .pin-india, .pin-south-Africa, .pin-australia {
+    position: absolute;
+    background: rgb(223, 247, 92);
+    color: white;
+    padding: 0.4vw;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: bounce 2s infinite; /* Apply the bounce animation */
+}
+
+.pin-usa:hover,
+.pin-canada:hover, .pin-uk:hover, .pin-europe:hover, .pin-middle-East:hover, .pin-india:hover, .pin-south-Africa:hover, .pin-australia:hover {
+    transform: scale(1.1);
+}
+
+.pin-usa span,
+.pin-canada span, .pin-uk span, .pin-europe span, .pin-middle-East span, .pin-india span, .pin-south-Africa span, .pin-south-Africa span, .pin-australia span {
+    display: none; /* Hide text by default */
+}
+
+.pin-usa:hover span,
+.pin-canada:hover span, .pin-uk:hover span, .pin-europe:hover span, .pin-middle-East:hover span, .pin-india:hover span, .pin-south-Africa:hover span, .pin-australia:hover span {
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Positioning for each pin */
+.pin-usa {
+    top: 37%; /* Adjust these values */
+    left: 22%; /* Adjust these values */
+}
+.pin-canada {
+    top: 29%; /* Adjust these values */
+    left: 19%; /* Adjust these values */
+}
+.pin-uk {
+    top: 31%; /* Adjust these values */
+    left: 46%; /* Adjust these values */
+}
+.pin-europe {
+    top: 29%; /* Adjust these values */
+    left: 56%; /* Adjust these values */
+}
+/*  */
+.pin-middle-East {
+    top: 46%; /* Adjust these values */
+    left: 58%; /* Adjust these values */
+}
+
+.pin-india {
+    top: 50%; /* Adjust these values */
+    left: 67%; /* Adjust these values */
+}
+
+.pin-south-Africa {
+    top: 73%; /* Adjust these values */
+    left: 53%; /* Adjust these values */
+}
+
+.pin-australia {
+    top: 76%; /* Adjust these values */
+    left: 84%; /* Adjust these values */
+}
+
+.icon{
+    top: 1%;
+    left: 2%;
+}
+.pin-europe img{
+    
+}
+.icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+/* Keyframes Animation (pulse) */
+@keyframes pulse {
+    0% {
+      box-shadow: 0px 0px 0px 0px rgba(255,255,0, 1);
+    }
+    100% {
+      box-shadow: 0px 0px 0px 7px rgba(5, 106, 180, 0.0);
+    }
+  }
+  
+  /* Rest of your existing CSS */
+  
+  .pin-usa,
+  .pin-canada,
+  .pin-uk,
+  .pin-europe,
+  .pin-middle-East,
+  .pin-india,
+  .pin-south-Africa,
+  .pin-australia {
+
+    position: absolute;
+    background: rgb(255, 255, 0);
+    color: white;
+    padding: 0.4vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    /* Apply the pulse animation */
+    animation: pulse 2s infinite ease-out;
+  }
+  
+  /* Rest of your existing CSS */
+  
